@@ -1,5 +1,8 @@
+
+
+
 // Create a client instance
-client = new Paho.MQTT.Client("broker.hivemq.com", 8000, "peppe");
+client = new Paho.MQTT.Client("212.227.226.198", 8000, "peppe");
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;
@@ -13,7 +16,7 @@ client.connect({onSuccess:onConnect});
 function onConnect() {
   // Once a connection has been made, make a subscription and send a message.
   console.log("onConnect");
-  client.subscribe("tufadaur/termostato");
+  client.subscribe("tufadaur");
 }
 
 // called when the client loses its connection
