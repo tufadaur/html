@@ -16,7 +16,7 @@ client.connect({onSuccess:onConnect});
 function onConnect() {
   // Once a connection has been made, make a subscription and send a message.
   console.log("onConnect");
-  client.subscribe("tufadaur/#");
+  client.subscribe("tufadaur");
 }
 
 // called when the client loses its connection
@@ -31,6 +31,7 @@ function onMessageArrived(message) {
 
     var topic = message.destinationName;
     var payload = message.payloadString;
+    console.log (topic) ;
     console.log (payload) ;
 
     obj = JSON.parse(payload);
