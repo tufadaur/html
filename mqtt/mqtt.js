@@ -32,8 +32,5 @@ function onMessageArrived(message) {
     var topic = message.destinationName;
     var payload = message.payloadString;
     console.log (payload) ;
-
-    obj = JSON.parse(payload);
-
     
 }
