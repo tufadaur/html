@@ -32,5 +32,10 @@ function onMessageArrived(message) {
     var topic = message.destinationName;
     var payload = message.payloadString;
     console.log (payload) ;
+
+    obj = JSON.parse(payload);
+
+    document.getElementById('temperatura').innerText = obj.temperatura.toFixed(1) ;
     
+
 }
