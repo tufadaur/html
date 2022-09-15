@@ -16,7 +16,7 @@ client.connect({onSuccess:onConnect});
 function onConnect() {
   // Once a connection has been made, make a subscription and send a message.
   console.log("onConnect");
-  client.subscribe("tufadaur");
+  client.subscribe("tufadaur/#");
 }
 
 // called when the client loses its connection
